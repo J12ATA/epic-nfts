@@ -19,5 +19,8 @@
   "homepage": "https://github.com/J12ATA/epic-nfts#readme",
   "devDependencies": {
     "hardhat": "^2.6.8"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.3"
   }
 }
