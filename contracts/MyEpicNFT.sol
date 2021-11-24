@@ -72,7 +72,7 @@ contract MyEpicNFT is ERC721URIStorage {
     uint256 newItemId = _tokenIds.current();
 
     require(
-      newItemId < 1,
+      newItemId < 50,
       "All NFTs have been minted"
     );
 
