@@ -71,6 +71,11 @@ contract MyEpicNFT is ERC721URIStorage {
   function makeAnEpicNFT() public {
     uint256 newItemId = _tokenIds.current();
 
+    require(
+      newItemId < 1,
+      "All NFTs have been minted"
+    );
+
     // We go and randomly grab one word from each of the three arrays.
     string memory first = pickRandomFirstWord(newItemId);
     string memory second = pickRandomSecondWord(newItemId);
@@ -124,5 +129,9 @@ contract MyEpicNFT is ERC721URIStorage {
     console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
 
     emit NewEpicNFTMinted(msg.sender, newItemId);
+  }
+
+  function totalMinted() public view returns (uint256) {
+    return _tokenIds.current();
   }
 }
