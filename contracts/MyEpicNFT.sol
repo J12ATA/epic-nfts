@@ -32,7 +32,7 @@ contract MyEpicNFT is ERC721URIStorage {
 
   event NewEpicNFTMinted(address sender, uint256 tokenId);
 
-  constructor() ERC721 ("SquareNFTs", "SQUARES") {
+  constructor() ERC721 ("SquareNFT", "SQUARE") {
     console.log("This is my NFT contract. Woah!");
   }
 
